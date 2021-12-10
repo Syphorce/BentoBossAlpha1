@@ -5,12 +5,15 @@ using UnityEngine.Events;
 
 public class DragAndDrop3D : MonoBehaviour
 {
+    public static DragAndDrop3D currentlyHeld;
+    public Inventory inventory;
     private Vector3 mOffset;
     private float mZCoord;
 
     void OnMouseDown()
 
     {
+        currentlyHeld = this;
         mZCoord = Camera.main.WorldToScreenPoint(
         gameObject.transform.position).z;
         // Store offset = gameobject world pos - mouse world pos
@@ -33,5 +36,15 @@ public class DragAndDrop3D : MonoBehaviour
     void OnMouseDrag()
     {
        transform.position = GetMouseAsWorldPoint() + mOffset;
+    }
+
+    private void OnMouseUp()
+    {
+        currentlyHeld = null;
+        if(inventory)
+        {
+            inventory.foodItems.Add(this);
+            Debug.Log(inventory.foodItems);
+        }
     }
 }
