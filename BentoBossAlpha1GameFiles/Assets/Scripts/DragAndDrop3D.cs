@@ -6,7 +6,6 @@ using UnityEngine.Events;
 public class DragAndDrop3D : MonoBehaviour
 {
     public static DragAndDrop3D currentlyHeld;
-    public Inventory inventory;
     private Vector3 mOffset;
     private float mZCoord;
 
@@ -41,10 +40,12 @@ public class DragAndDrop3D : MonoBehaviour
     private void OnMouseUp()
     {
         currentlyHeld = null;
-        if(inventory)
+        /* 
+         if(inventory)
         {
             inventory.foodItems.Add(this);
-            Debug.Log(inventory.foodItems);
+            //Debug.Log(inventory.foodItems);
         }
+        */
     }
 }
