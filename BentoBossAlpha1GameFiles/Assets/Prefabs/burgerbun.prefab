@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1169826035428776349
+--- !u!1 &3573478099472522052
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,55 +8,54 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1166914887540807143}
-  - component: {fileID: 1173959839239708841}
-  - component: {fileID: 1183942534947232239}
-  - component: {fileID: 1170798555578667189}
-  - component: {fileID: 1170798555578667188}
-  - component: {fileID: 1170798555578667187}
-  - component: {fileID: -5440065457508930806}
-  - component: {fileID: 2322707184639022886}
+  - component: {fileID: 4241365869550289406}
+  - component: {fileID: 969259478095351387}
+  - component: {fileID: 3069052606595545745}
+  - component: {fileID: 4419969349170672401}
+  - component: {fileID: 4419969349170672413}
+  - component: {fileID: 4419969349170672412}
+  - component: {fileID: -6766887903152253601}
   m_Layer: 0
-  m_Name: HotDog
+  m_Name: burgerbun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1166914887540807143
+--- !u!4 &4241365869550289406
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1169826035428776349}
-  m_LocalRotation: {x: -0.30403313, y: -0, z: -0, w: 0.9526615}
-  m_LocalPosition: {x: -457.9424, y: -252.5783, z: -18.539513}
-  m_LocalScale: {x: 8, y: 8, z: 8}
+  m_GameObject: {fileID: 3573478099472522052}
+  m_LocalRotation: {x: 0.048073683, y: 0.9261049, z: -0.105949834, w: 0.35887793}
+  m_LocalPosition: {x: -465.8624, y: -252.0183, z: -19.509512}
+  m_LocalScale: {x: 62.61075, y: 62.61075, z: 62.610756}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -35.4, y: 0, z: 0}
---- !u!33 &1173959839239708841
+  m_LocalEulerAnglesHint: {x: -193.341, y: -42.274994, z: -179.235}
+--- !u!33 &969259478095351387
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1169826035428776349}
-  m_Mesh: {fileID: 4300000, guid: 262d1a6f513ed5b4fb329e79b124e2cf, type: 3}
---- !u!23 &1183942534947232239
+  m_GameObject: {fileID: 3573478099472522052}
+  m_Mesh: {fileID: 5922078085390361680, guid: f92c3199ee6442249b46ebee48e43f1e, type: 3}
+--- !u!23 &3069052606595545745
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1169826035428776349}
+  m_GameObject: {fileID: 3573478099472522052}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_MotionVectors: 0
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
@@ -64,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dd4330fb196ead84ea9d14e6bbbe8ed5, type: 2}
+  - {fileID: 2366858441726446098, guid: f92c3199ee6442249b46ebee48e43f1e, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -86,13 +85,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &1170798555578667189
+--- !u!54 &4419969349170672401
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1169826035428776349}
+  m_GameObject: {fileID: 3573478099472522052}
   serializedVersion: 2
   m_Mass: 0.6
   m_Drag: 0
@@ -102,59 +101,44 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &1170798555578667188
+--- !u!64 &4419969349170672413
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1169826035428776349}
+  m_GameObject: {fileID: 3573478099472522052}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 262d1a6f513ed5b4fb329e79b124e2cf, type: 3}
---- !u!114 &1170798555578667187
+  m_Mesh: {fileID: 5922078085390361680, guid: f92c3199ee6442249b46ebee48e43f1e, type: 3}
+--- !u!114 &4419969349170672412
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1169826035428776349}
+  m_GameObject: {fileID: 3573478099472522052}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d5e6768c0abce148a8c4fae66c0386f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-5440065457508930806
+--- !u!114 &-6766887903152253601
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1169826035428776349}
+  m_GameObject: {fileID: 3573478099472522052}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 27cefdd31c1e9a2429911dfe9629e68a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodImage: {fileID: 21300034, guid: 37607ec1aab56e349af84a980f685a4b, type: 3}
+  foodImage: {fileID: 21300028, guid: 37607ec1aab56e349af84a980f685a4b, type: 3}
   drop: {fileID: 8764860824570504786, guid: 1a7a3d78914bc8a45aa07141b85b0c27, type: 3}
-  item: {fileID: 1169826035428776349}
---- !u!114 &2322707184639022886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1169826035428776349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27cefdd31c1e9a2429911dfe9629e68a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  foodImage: {fileID: 0}
-  drop: {fileID: 0}
-  item: {fileID: 0}
+  item: {fileID: 3573478099472522052}
