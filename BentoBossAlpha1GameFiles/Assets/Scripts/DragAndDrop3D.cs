@@ -5,59 +5,111 @@ using UnityEngine.Events;
 
 public class DragAndDrop3D : MonoBehaviour
 {
-    // // private Vector3 mOffset;
-    // private float mZCoord;
+    public static DragAndDrop3D currentlyHeld;
+  float dist;
+    Vector3 startPos;
+    public GameObject dragCollider;
+    /*
+    private Vector3 mOffset;
+    private float mZCoord;
+    float posX;
+    float posZ;
+    float posY;
+    */
 
-    
+    /*private void Update()
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            mZCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
+            //store offset = gameobject world ps - mouse world pos
+            mOffset = gameObject.transform.position - GetMouseAsWorldPoint();
+           
+        }
+        if (Input.GetMouseButton(0))
+        {
+            transform.position = new Vector3(GetMouseAsWorldPoint().x + mOffset.x, transform.position.y, transform.position.z);
+            //transform.position = GetMOuseAsWorldPoint + mOffset;
+
+        }
+    }
+    */
+
+    private void Start()
+    {
+        dragCollider.SetActive(false);
+        print(dragCollider + "is inactive");
+    }
+
+
     void OnMouseDown()
 
     {
-        GameObject.Find("Drag Collider").GetComponent<Collider>().enabled = true;
-        gameObject.GetComponent<Rigidbody>().freezeRotation = true;
-        // mZCoord = Camera.main.WorldToScreenPoint(
-        // gameObject.transform.position).z;
-        // // Store offset = gameobject world pos - mouse world pos
-        // mOffset = gameObject.transform.position - GetMouseAsWorldPoint();
+        currentlyHeld = this;
+        dragCollider.SetActive(true);
+        print(dragCollider + "is active");
+        /*
+        mZCoord = Camera.main.WorldToScreenPoint(
+        gameObject.transform.position).z;
+        // Store offset = gameobject world pos - mouse world pos
+
+        startPos = transform.position;
+        dist = Camera.main.WorldToScreenPoint(transform.position);
+        posX = Input.mousePosition.x - dist.x;
+        posY = Input.mousePosition.y - dist.y;
+        posZ = Input.mousePosition.z - dist.z;
+        */
+        startPos = Camera.main.WorldToScreenPoint(transform.position);
+        dist = transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, startPos.y, Input.mousePosition.y));
+
+
+
 
     }
 
-    private Vector3 GetMouseAsWorldPoint()
+    /* private Vector3 GetMouseAsWorldPoint()
 
     {
-         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-          RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 100,~1))
-            {
-                Debug.Log(hit.transform.name);
-                // 1 << 3
-                // Debug.Log(hit.transform.name);
-                // Debug.Log("hit");
-
-                return hit.point;
-            }
-
-                 return Vector3.zero;
-
-
-        // // Pixel coordinates of mouse (x,y)
-        // Vector3 mousePoint = Input.mousePosition;
-        // // z coordRay ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-          
-        // mousePoint.z = mZCoord;
-        // // Convert it to world points
-        // return Camera.main.ScreenToWorldPoint(mousePoint);
+        // Pixel coordinates of mouse (x,y)
+        Vector3 mousePoint = Input.mousePosition;
+        // z coordinate of game object on screen
+        mousePoint.z = mZCoord;
+        // Convert it to world points
+        return Camera.main.ScreenToWorldPoint(mousePoint);
 
     }
+    */
 
     void OnMouseDrag()
     {
-       transform.position = GetMouseAsWorldPoint();
+        /*
+        float disX = Input.mousePosition.x - posX;
+        float disY = Input.mousePosition.y - posY;
+        float disZ = Input.mousePosition.z - posZ;
+        Vector3 lastPos = Camera.main.ScreenToWorldPoint(new Vector3(disX, disY, disZ));
+        transform.position = new Vector3(lastPos.x, startPos.y, lastPos.z);
+
+        transform.position = GetMouseAsWorldPoint() + mOffset;
+        transform.position = new Vector3(GetMouseAsWorldPoint().x + mOffset.x, transform.position.y, transform.position.z);
+        */
+
+        Vector3 lastPos = new Vector3(Input.mousePosition.x, startPos.y, Input.mousePosition.y);
+        Vector3 targetPos = Camera.main.ScreenToWorldPoint(lastPos) + dist;
+        Vector3 dir = targetPos - transform.position;
+        dist = dir.magnitude;
+        Vector3.Normalize(dir);
+        transform.position += new Vector3(dir.x * dist * 1.0f, dir.y * dist * 1.0f, dir.z * dist * 1.0f);
+        
+        /*dragCollider.SetActive(false);
+        print(dragCollider + "is inactive");
+        */
     }
 
-    void OnMouseUp() {
+    
+   private void OnMouseUp()
+  {
+       currentlyHeld = null;
 
-   GameObject.Find("Drag Collider").GetComponent<Collider>().enabled = false;
-   gameObject.GetComponent<Rigidbody>().freezeRotation = false;
-
-    }
+   }
+    
 }
