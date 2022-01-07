@@ -10,6 +10,7 @@ public class RotateObject : MonoBehaviour
     float smooth = 5.0f;
     float tiltAngle = 60.0f;
     float accelx, accely, accelz = 0;
+    bool currentlyHeld;
     /*
         private void Start()
         {
@@ -45,20 +46,31 @@ public class RotateObject : MonoBehaviour
     {
         // Smoothly tilts a transform towards a target rotation.
 
+        if (currentlyHeld)
+        {
 
-        float tiltAroundZ = Input.GetAxis("Horizontal") * tiltAngle;
-        float tiltAroundX = Input.GetAxis("Vertical") * tiltAngle;
 
-        // Rotate the cube by converting the angles into a quaternion.
-        Quaternion target = Quaternion.Euler(tiltAroundX, 0, tiltAroundZ);
+            float tiltAroundZ = Input.GetAxis("Horizontal") * tiltAngle * Time.deltaTime;
+            float tiltAroundX = Input.GetAxis("Vertical") * tiltAngle * Time.deltaTime;
 
-        // Dampen towards the target rotation
-        transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smooth);
+            // Rotate the cube by converting the angles into a quaternion.
+            transform.rotation = Quaternion.Euler(tiltAroundX, 0, tiltAroundZ) * transform.rotation;
 
-        accelx = Input.acceleration.x;
-        accely = Input.acceleration.y;
-        accelz = Input.acceleration.z;
-        transform.Rotate(accelx * Time.deltaTime, accely * Time.deltaTime, accelz * Time.deltaTime);
+            // Dampen towards the target rotation
+            //transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smooth);
+        }
+    }
+
+    private void OnMouseDown()
+    {
+       
+        currentlyHeld = true;
+    }
+
+    private void OnMouseUp()
+    {
+        currentlyHeld = false;
+
     }
 
 }
