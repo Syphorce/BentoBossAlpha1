@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6800878867886054168}
   - component: {fileID: 2864433729880696463}
   - component: {fileID: 9116488806773504698}
+  - component: {fileID: 6153984093178807976}
   m_Layer: 0
   m_Name: nigiri_salmon
   m_TagString: Untagged
@@ -142,5 +143,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d5e6768c0abce148a8c4fae66c0386f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6153984093178807976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7061891879636190332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0d98e0aff90ea44caebed0047cd93fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
