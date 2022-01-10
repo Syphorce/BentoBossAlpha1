@@ -7,7 +7,7 @@ public class MenuUI : MonoBehaviour
 {
  public void OnPlayButton()
     {//Change "SampleScene" to "Game" when we eventually change the Sample Scene name to Game Scene
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("GameSceneMain");
 
     }
     
