@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27cefdd31c1e9a2429911dfe9629e68a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodImage: {fileID: 0}
+  foodImage: {fileID: 21300000, guid: 1d9c14bbb401a45caa87d8f6bade9172, type: 3}
   drop: {fileID: 3823719682809919061, guid: a18628d3c3843414289ddc879dfee764, type: 3}
   item: {fileID: 4837690583198062869}
 --- !u!114 &-2623490598667153414
