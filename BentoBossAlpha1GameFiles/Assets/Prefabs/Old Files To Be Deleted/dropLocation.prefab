@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7853018496786392131}
   m_Layer: 0
-  m_Name: dropLocation 1 (1)
+  m_Name: dropLocation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

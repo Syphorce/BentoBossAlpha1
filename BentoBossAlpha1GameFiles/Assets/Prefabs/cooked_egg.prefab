@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7672977245218082995
+--- !u!1 &1142953843382645346
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,51 +8,51 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7003155188480559625}
-  - component: {fileID: 6241970526632166828}
-  - component: {fileID: 8177156308354380134}
-  - component: {fileID: 2504218996816717888}
-  - component: {fileID: 6514909795799974823}
-  - component: {fileID: 4473669275938217131}
-  - component: {fileID: 1459440152034100161}
-  - component: {fileID: 7763572438548914983}
+  - component: {fileID: 330811006727825624}
+  - component: {fileID: 3690872856616511357}
+  - component: {fileID: 1503192954801673143}
+  - component: {fileID: 7181758273477689998}
+  - component: {fileID: 5967407806495294759}
+  - component: {fileID: -8540251775168257915}
+  - component: {fileID: -444593489885281486}
+  - component: {fileID: -8152584658726576943}
   m_Layer: 0
-  m_Name: nigiri_salmon
+  m_Name: cooked_egg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7003155188480559625
+--- !u!4 &330811006727825624
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7672977245218082995}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 32.632, y: -0, z: -9.967}
-  m_LocalScale: {x: 36.361, y: 21.684504, z: 12.479471}
+  m_GameObject: {fileID: 1142953843382645346}
+  m_LocalRotation: {x: -0.4820204, y: 0.5173552, z: -0.5173551, w: 0.48202035}
+  m_LocalPosition: {x: 34.576, y: -0.016, z: -6.025}
+  m_LocalScale: {x: 33.066784, y: 35.368927, z: 45.529446}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6241970526632166828
+--- !u!33 &3690872856616511357
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7672977245218082995}
-  m_Mesh: {fileID: -7280613543547003973, guid: 8fe4326075c5a364b83aee730074eb95, type: 3}
---- !u!23 &8177156308354380134
+  m_GameObject: {fileID: 1142953843382645346}
+  m_Mesh: {fileID: 70948873267775455, guid: 936af1c5663b6a542acfce2a640c4324, type: 3}
+--- !u!23 &1503192954801673143
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7672977245218082995}
+  m_GameObject: {fileID: 1142953843382645346}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -66,7 +66,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: 8fe4326075c5a364b83aee730074eb95, type: 3}
+  - {fileID: 99656467281103303, guid: 936af1c5663b6a542acfce2a640c4324, type: 3}
+  - {fileID: 9185737683893222716, guid: 936af1c5663b6a542acfce2a640c4324, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -88,52 +89,52 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2504218996816717888
+--- !u!114 &7181758273477689998
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7672977245218082995}
+  m_GameObject: {fileID: 1142953843382645346}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0d98e0aff90ea44caebed0047cd93fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6514909795799974823
+--- !u!114 &5967407806495294759
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7672977245218082995}
+  m_GameObject: {fileID: 1142953843382645346}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 27cefdd31c1e9a2429911dfe9629e68a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodImage: {fileID: 21300000, guid: d7fb9b3a098ce4e3abae94997216b309, type: 3}
+  foodImage: {fileID: 21300000, guid: da407e6fd3415456dbf1c4b7e186b967, type: 3}
   drop: {fileID: 3823719682809919061, guid: a18628d3c3843414289ddc879dfee764, type: 3}
-  item: {fileID: 7672977245218082995}
---- !u!114 &4473669275938217131
+  item: {fileID: 1142953843382645346}
+--- !u!114 &-8540251775168257915
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7672977245218082995}
+  m_GameObject: {fileID: 1142953843382645346}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d5e6768c0abce148a8c4fae66c0386f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!54 &1459440152034100161
+--- !u!54 &-444593489885281486
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7672977245218082995}
+  m_GameObject: {fileID: 1142953843382645346}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -143,17 +144,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &7763572438548914983
+--- !u!64 &-8152584658726576943
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7672977245218082995}
+  m_GameObject: {fileID: 1142953843382645346}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: -7280613543547003973, guid: 8fe4326075c5a364b83aee730074eb95, type: 3}
+  m_Mesh: {fileID: 70948873267775455, guid: 936af1c5663b6a542acfce2a640c4324, type: 3}
