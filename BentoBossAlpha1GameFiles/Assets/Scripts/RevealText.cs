@@ -17,9 +17,11 @@ public class RevealText : MonoBehaviour
 
     public void Displaytext()
     {
-        displayText.text = "Left click to drag and drop food.";
+        displayText.text = "Left click Menu item to drop food. Left click to Drag and Drop food.  Use'WASD' to rotate food.";
+
+
     }
 
- 
-  
+
+
 }
