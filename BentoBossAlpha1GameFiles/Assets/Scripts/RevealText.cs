@@ -5,23 +5,23 @@ using UnityEngine.UI;
 
 public class RevealText : MonoBehaviour
 {
-    public Text displayText;
-   
-    
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private GameObject text;
+    private bool isEnabled;
+
+
+    private void Start()
     {
-        displayText.text = " ";
-       
+        
+        gameObject.GetComponent<Button>().onClick.AddListener(TurnOnAndOff);
+        isEnabled = false;
+        text.SetActive(isEnabled);
     }
-
-    public void Displaytext()
+    public void TurnOnAndOff()
     {
-        displayText.text = "Left click Menu item to drop food. Left click to Drag and Drop food.  Use 'WASD' to rotate food. Hit Restart to empty bento box.";
-
-
+        isEnabled ^= true;
+        text.SetActive(isEnabled);
     }
+  
+ }
 
-
-
-}
