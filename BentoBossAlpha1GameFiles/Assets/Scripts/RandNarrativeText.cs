@@ -18,7 +18,7 @@ public class RandNarrativeText : MonoBehaviour
         string[] narrativePrompt = new string[] { "Could I please have ", "Would you include ", "Maybe add ", "What about some ", "Can I try the " , "Can I have the " , "Where's the " };
 
         //Food list to suggest to the player
-        string[] narrativeFood = new string[] { "salmon maki", "avocado maki", "sumiri maki", "sushi rolls", "rice", "squid", "onigiri", "eggs", "nigiri", "kiwi", "tomatoes", "radishes", "mushrooms", "sausage"} ;
+        string[] narrativeFood = new string[] { "salmon roll", "avocado roll", "sumiri roll", "sushi", "rice", "squid", "onigiri", "eggs", "nigiri", "kiwi", "tomatoes", "radishes", "mushrooms", "sausage"} ;
 
         //Objective is the Prompt + Food + Punctuation
         string narrativeObjective = narrativePrompt[Random.Range(0, narrativePrompt.Length)] + narrativeFood[Random.Range(0, narrativePrompt.Length)] + "?";
