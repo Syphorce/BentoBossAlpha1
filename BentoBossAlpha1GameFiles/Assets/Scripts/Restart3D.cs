@@ -10,5 +10,6 @@ public class Restart3D : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+   
     }
 }
